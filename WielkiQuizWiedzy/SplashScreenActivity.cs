@@ -1,5 +1,6 @@
 ﻿using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -12,7 +13,7 @@ using System.Threading;
 
 namespace WielkiQuizWiedzy
 {
-    [Activity(Label = "SplashScreenActivity", MainLauncher =true, Theme ="@style/Theme.Splash", NoHistory = true, Icon = "@drawable/splash")]
+    [Activity(Label = "SplashScreenActivity", MainLauncher =true, Theme ="@style/Theme.Splash", NoHistory = true, Icon = "@drawable/splash", ScreenOrientation = ScreenOrientation.Portrait)]
     public class SplashScreenActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
