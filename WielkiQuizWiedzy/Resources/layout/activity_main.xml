@@ -15,6 +15,7 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
             android:text="Wielki Quiz Wiedzy"
             android:textSize="34sp"
             app:layout_constraintEnd_toEndOf="parent"
