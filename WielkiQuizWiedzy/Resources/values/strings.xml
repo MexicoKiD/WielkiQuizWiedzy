@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">WielkiQuizWiedzy</string>
     <string name="action_settings">Settings</string>
+    <string name="info">Jak daleko sięga Twoja wiedza ogólna?</string>
+    <string name="info2">Oto świetny sposób, aby się przekonać!</string>
+    <string name="info3">Odpowiedz na pytania,</string>
+    <string name="info4">które zawiera ten quiz wiedzy i dowiedz się,</string>
+    <string name="info5">ile naprawdę wiesz o otaczającym Cię świecie.</string>
 </resources>

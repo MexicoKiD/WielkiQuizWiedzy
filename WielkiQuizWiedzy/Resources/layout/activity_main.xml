@@ -1,90 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#49A64D"
-    android:backgroundTint="#4CAF50">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#49A64D"
+                android:backgroundTint="#4CAF50">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:id="@+id/textView2"
+    <TextView
+            android:id="@+id/logo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:text="Wielki Quiz Wiedzy"
             android:textSize="34sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="32dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="32dp"
+            android:textAlignment="center"
+            android:textStyle="bold"/>
 
-        <Button
-            android:id="@+id/button"
+    <Button
+            android:id="@+id/buttonStart"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="32dp"
-            android:backgroundTint="#000000"
             android:paddingTop="16dp"
             android:paddingBottom="16dp"
             android:text="Start"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            android:textSize="24sp"
+            android:layout_below="@+id/logo"
+            android:background="@drawable/rounded_corners"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="true"
+            android:gravity="center"
+            android:textStyle="bold"/>
 
-        <Button
-            android:id="@+id/button2"
+    <Button
+            android:id="@+id/buttonStats"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
             android:layout_marginEnd="32dp"
             android:backgroundTint="#000000"
             android:paddingTop="16dp"
             android:paddingBottom="16dp"
             android:text="Osiągnięcia"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button" />
+            android:textSize="24sp"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/rounded_corners"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="32dp"
+            android:layout_below="@+id/buttonStart"/>
 
-        <Button
-            android:id="@+id/button3"
+    <Button
+            android:id="@+id/buttonInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
             android:layout_marginEnd="32dp"
-            android:backgroundTint="#000000"
             android:paddingTop="16dp"
             android:paddingBottom="16dp"
             android:text="Informacje"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button2" />
+            android:textSize="24sp"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/rounded_corners"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="32dp"
+            android:layout_below="@+id/buttonStats"/>
 
-        <Button
-            android:id="@+id/button4"
+    <Button
+            android:id="@+id/buttonExit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
             android:layout_marginEnd="32dp"
-            android:backgroundTint="#000000"
             android:paddingTop="16dp"
             android:paddingBottom="16dp"
             android:text="Wyjście"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button3" />
+            android:textSize="24sp"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/rounded_corners"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="32dp"
+            android:layout_below="@+id/buttonInfo"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</FrameLayout>
+</RelativeLayout>

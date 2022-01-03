@@ -1,108 +1,158 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#49A64D"
-    android:backgroundTint="#4CAF50">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#49A64D"
+                android:backgroundTint="#4CAF50">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:id="@+id/textView3"
+    <TextView
+            android:id="@+id/logo2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:text="Wielki Quiz Wiedzy"
             android:textSize="34sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"
+            android:textAlignment="center"
+            android:textStyle="bold"/>
 
-        <TextView
+    <TextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="32dp"
             android:text="Autorzy:"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            android:layout_below="@+id/logo2"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_alignParentStart="true"/>
 
-        <TextView
+    <TextView
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:text="Hubert Mościcki"
             android:textAlignment="viewStart"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+            android:layout_below="@+id/textView4"
+            android:textSize="18sp"
+            android:layout_alignParentStart="true"/>
 
-        <TextView
+    <TextView
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="32dp"
-            android:text="Jak daleko sięga Twoja wiedza ogólna? 🤔  
-            Oto świetny sposób, aby się przekonać!  
-            Odpowiedz na pytania, które zawiera ten quiz wiedzy i dowiedz się, ile naprawdę wiesz o otaczającym Cię świecie."
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+            android:text="@string/info"
+            android:layout_below="@+id/textView8"
+            android:textSize="16sp"
+            android:layout_alignParentStart="true"/>
 
-        <TextView
+    <TextView
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:text="Kacper Moskal"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+            android:layout_below="@+id/textView5"
+            android:textSize="18sp"
+            android:layout_alignParentStart="true"/>
 
-        <TextView
+    <TextView
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:text="Michał Michalak"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+            android:layout_below="@+id/textView7"
+            android:textSize="18sp"
+            android:layout_alignParentStart="true"/>
 
-        <TextView
+    <TextView
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:text="App Developer"
-            app:layout_constraintStart_toEndOf="@+id/textView5"
-            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+            android:layout_below="@+id/textView4"
+            android:layout_toEndOf="@+id/textView5"
+            android:textSize="18sp"
+            android:layout_marginEnd="101dp"/>
 
-        <TextView
+    <TextView
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:text="QA Engineer"
-            app:layout_constraintStart_toEndOf="@+id/textView5"
-            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+            android:layout_below="@+id/textView9"
+            android:textSize="18sp"
+            android:layout_toEndOf="@+id/textView5"
+            android:layout_marginStart="16dp"/>
 
-        <TextView
+    <TextView
             android:id="@+id/textView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:text="UI/UX Designer"
-            app:layout_constraintStart_toEndOf="@+id/textView5"
-            app:layout_constraintTop_toBottomOf="@+id/textView10" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</FrameLayout>
+            android:layout_below="@+id/textView10"
+            android:textSize="18sp"
+            android:layout_toEndOf="@+id/textView5"
+            android:layout_marginStart="16dp"/>
+
+    <TextView
+            android:text="@string/info2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/textView6"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"
+            android:textSize="16sp"/>
+
+    <TextView
+            android:text="@string/info3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"
+            android:textSize="16sp"/>
+
+    <TextView
+            android:text="@string/info4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/textView2"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"
+            android:textSize="16sp"/>
+
+    <TextView
+            android:text="@string/info5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView12"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/textView3"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"
+            android:textSize="16sp"/>
+
+</RelativeLayout>

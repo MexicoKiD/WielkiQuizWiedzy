@@ -2,10 +2,8 @@
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
-using Android.Locations;
 using Android.OS;
 using Android.Runtime;
-using Android.Views;
 using Android.Widget;
 using AndroidX.AppCompat.App;
 
@@ -21,11 +19,14 @@ namespace WielkiQuizWiedzy
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
 
-            Button infoButton = FindViewById<Button>(Resource.Id.button3);
-            infoButton.Click += infoButtonOnClick;
+            Button infoButton = FindViewById<Button>(Resource.Id.buttonInfo);
+            infoButton!.Click += infoButtonOnClick;
 
-            Button achievementButton = FindViewById<Button>(Resource.Id.button2);
-            achievementButton.Click += achievementButtonOnClick;
+            Button achievementButton = FindViewById<Button>(Resource.Id.buttonStats);
+            achievementButton!.Click += achievementButtonOnClick;
+
+            Button exitButton = FindViewById<Button>(Resource.Id.buttonExit);
+            exitButton!.Click += closeApplication;
 
         }
         private void infoButtonOnClick(object sender, EventArgs eventArgs)
@@ -39,7 +40,12 @@ namespace WielkiQuizWiedzy
             Intent intent = new Intent(this, typeof(AchievementActivity));
             this.StartActivity(intent);
         }
-        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
+
+        public void closeApplication(object sender, EventArgs eventArgs)
+        {
+            Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
+        }
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
