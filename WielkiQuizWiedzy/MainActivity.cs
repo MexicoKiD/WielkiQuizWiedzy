@@ -9,7 +9,8 @@ using AndroidX.AppCompat.App;
 
 namespace WielkiQuizWiedzy
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true, ScreenOrientation = ScreenOrientation.Portrait)]
+    [Activity(Label = "@string/app_name", Theme = "@style/Theme.AppCompat.Light.NoActionBar", MainLauncher = true, ScreenOrientation = ScreenOrientation.Portrait)]
+    
     public class MainActivity : AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -18,6 +19,9 @@ namespace WielkiQuizWiedzy
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
+
+            Button startButton = FindViewById<Button>(Resource.Id.buttonStart);
+            startButton!.Click += StartGame;
 
             Button infoButton = FindViewById<Button>(Resource.Id.buttonInfo);
             infoButton!.Click += infoButtonOnClick;
@@ -28,6 +32,12 @@ namespace WielkiQuizWiedzy
             Button exitButton = FindViewById<Button>(Resource.Id.buttonExit);
             exitButton!.Click += closeApplication;
 
+        }
+
+        private void StartGame(object sender, EventArgs eventArgs)
+        {
+            Intent intent = new Intent(this, typeof(GameActivity));
+            this.StartActivity(intent);
         }
         private void infoButtonOnClick(object sender, EventArgs eventArgs)
         {
@@ -41,9 +51,9 @@ namespace WielkiQuizWiedzy
             this.StartActivity(intent);
         }
 
-        public void closeApplication(object sender, EventArgs eventArgs)
+        private void closeApplication(object sender, EventArgs eventArgs)
         {
-            Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
+            Process.KillProcess(Process.MyPid());
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
         {
