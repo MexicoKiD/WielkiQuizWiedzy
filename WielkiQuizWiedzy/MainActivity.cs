@@ -2,6 +2,7 @@
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
+using Android.Database.Sqlite;
 using Android.OS;
 using Android.Runtime;
 using Android.Widget;
@@ -11,8 +12,9 @@ namespace WielkiQuizWiedzy
 {
     [Activity(Label = "@string/app_name", Theme = "@style/Theme.AppCompat.Light.NoActionBar", MainLauncher = true, ScreenOrientation = ScreenOrientation.Portrait)]
     
-    public class MainActivity : AppCompatActivity
-    {
+    public class MainActivity : AppCompatActivity {
+        
+        
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -20,15 +22,12 @@ namespace WielkiQuizWiedzy
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
 
-            Button startButton = FindViewById<Button>(Resource.Id.buttonStart);
-            startButton!.Click += StartGame;
-
             Button infoButton = FindViewById<Button>(Resource.Id.buttonInfo);
             infoButton!.Click += infoButtonOnClick;
-
-            Button achievementButton = FindViewById<Button>(Resource.Id.buttonStats);
-            achievementButton!.Click += achievementButtonOnClick;
-
+            
+            Button StartButton = FindViewById<Button>(Resource.Id.buttonStart);
+            StartButton!.Click += StartGame;
+            
             Button exitButton = FindViewById<Button>(Resource.Id.buttonExit);
             exitButton!.Click += closeApplication;
 
@@ -42,12 +41,6 @@ namespace WielkiQuizWiedzy
         private void infoButtonOnClick(object sender, EventArgs eventArgs)
         {
             Intent intent = new Intent(this, typeof(InfoActivity));
-            this.StartActivity(intent);
-        }
-        
-        private void achievementButtonOnClick(object sender, EventArgs eventArgs)
-        {
-            Intent intent = new Intent(this, typeof(AchievementActivity));
             this.StartActivity(intent);
         }
 
