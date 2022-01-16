@@ -27,7 +27,10 @@ namespace WielkiQuizWiedzy
             SetContentView(Resource.Layout.playing_layout);  
             //Get data from Main Activity  
             Bundle extra = Intent.Extras;  
-            if (extra != null) mode = extra.GetString("MODE");  
+            if (extra != null) mode = extra.GetString("MODE");
+            index = 0;
+            score = 0;
+            thisQuestion = 0;
             db = new DbHelper(this);  
             txtScore = FindViewById < TextView > (Resource.Id.txtScore);  
             questionNumber = FindViewById < TextView > (Resource.Id.questionNumber);  
@@ -64,8 +67,9 @@ namespace WielkiQuizWiedzy
                 btnB.Text = questionPlay[index].AnswerB;  
                 btnC.Text = questionPlay[index].AnswerC;  
                 btnD.Text = questionPlay[index].AnswerD;  
-                mCountDown.Start();  
-            } else {  
+                mCountDown.Start();
+            } else
+            {
                 Intent intent = new Intent(this, typeof(Done));  
                 Bundle dataSend = new Bundle();  
                 dataSend.PutInt("SCORE", score);  

@@ -1,4 +1,6 @@
-﻿using Android.App;
+﻿using System.ComponentModel;
+using System.Reflection;
+using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Widget;
@@ -18,8 +20,9 @@ namespace WielkiQuizWiedzy
             txtTotalQuestion = FindViewById < TextView > (Resource.Id.txtTotalQuestion);  
             txtTotalScore = FindViewById < TextView > (Resource.Id.txtTotalScore);  
             progressBarResult = FindViewById < ProgressBar > (Resource.Id.progressBardone);  
-            btnTryAgain.Click += delegate {  
-                Intent intent = new Intent(this, typeof(MainActivity));  
+            btnTryAgain.Click += delegate
+            {
+                Intent intent = new Intent(this, typeof(GameActivity));  
                 StartActivity(intent);  
                 Finish();  
             };  
@@ -58,7 +61,7 @@ namespace WielkiQuizWiedzy
                 double minus = ((5.0 / (float) score) * 100) * (playCount - 1);  
                 double finalScore = score - minus;  
                 //  
-                txtTotalScore.Text = $"SCORE :{ finalScore.ToString("  0.00 ")} (-{ 5 * (playCount - 1)}%) ";  
+                txtTotalScore.Text = $"SCORE :{ finalScore.ToString("  0.00 ")}";  
                 txtTotalQuestion.Text = $"PASSED : {coreectAnswer}/{totalQuestion}";  
                 progressBarResult.Max = totalQuestion;  
                 progressBarResult.Progress = coreectAnswer;  
