@@ -67,7 +67,7 @@ public class DbHelper: SQLiteOpenHelper {
             SQLiteDatabase db = WritableDatabase;
             ICursor c;
             try {
-                c = db.RawQuery($"SELECT * FROM Ranking ORDER BY Score", null);
+                c = db.RawQuery($"SELECT * FROM Ranking ORDER BY Score desc LIMIT 10", null);
                 if (c == null) {
                     return null;
                 } else {

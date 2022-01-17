@@ -30,6 +30,7 @@ namespace WielkiQuizWiedzy
             if (extra != null) mode = extra.GetString("MODE");
             index = 0;
             score = 0;
+            correctAnswer = 0;
             thisQuestion = 0;
             db = new DbHelper(this);  
             txtScore = FindViewById < TextView > (Resource.Id.txtScore);  
