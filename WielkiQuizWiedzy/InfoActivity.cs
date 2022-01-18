@@ -4,7 +4,7 @@ using Android.OS;
 
 namespace WielkiQuizWiedzy
 {
-    [Activity(Label = "InfoActivity", ScreenOrientation = ScreenOrientation.Portrait)]
+    [Activity(Label = "InfoActivity", Theme = "@style/Theme.AppCompat.Light.NoActionBar", ScreenOrientation = ScreenOrientation.Portrait)]
     public class InfoActivity: Activity
     {
         protected override void OnCreate(Bundle bundle)

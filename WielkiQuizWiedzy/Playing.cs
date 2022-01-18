@@ -5,13 +5,18 @@ using Android.Views;
 using Android.Widget;
 using System;
 using Android.Content;
+using Android.Content.PM;
+using Xamarin.Forms;
+using Button = Android.Widget.Button;
+using ProgressBar = Android.Widget.ProgressBar;
+using View = Android.Views.View;
 
 namespace WielkiQuizWiedzy
 {
-[Activity(Label = "Playing", Theme = "@style/Theme.AppCompat.Light.NoActionBar")]  
+[Activity(Label = "Playing", Theme = "@style/Theme.AppCompat.Light.NoActionBar", NoHistory = true, ScreenOrientation = ScreenOrientation.Portrait)]  
     public class Playing: Activity, View.IOnClickListener {  
         const long INTERVAL = 1000;  
-        const long TIMEOUT = 6000;  
+        long TIMEOUT;  
         public int progressValue = 0;  
         static CountDown mCountDown;  
         List <Questions> questionPlay = new List <Questions> ();  
@@ -22,16 +27,18 @@ namespace WielkiQuizWiedzy
         public ProgressBar progressBar;  
         TextView txtScore, questionNumber, question;  
         Button btnA, btnB, btnC, btnD;
-        protected override void OnCreate(Bundle savedInstanceState) {  
+        protected override void OnCreate(Bundle savedInstanceState) {
             base.OnCreate(savedInstanceState);  
             SetContentView(Resource.Layout.playing_layout);  
             //Get data from Main Activity  
-            Bundle extra = Intent.Extras;  
+            Bundle extra = Intent.Extras;
             if (extra != null) mode = extra.GetString("MODE");
+            TIMEOUT = 0;
             index = 0;
             score = 0;
             correctAnswer = 0;
             thisQuestion = 0;
+
             db = new DbHelper(this);  
             txtScore = FindViewById < TextView > (Resource.Id.txtScore);  
             questionNumber = FindViewById < TextView > (Resource.Id.questionNumber);  
@@ -44,8 +51,19 @@ namespace WielkiQuizWiedzy
             btnA.SetOnClickListener(this);  
             btnB.SetOnClickListener(this);  
             btnC.SetOnClickListener(this);  
-            btnD.SetOnClickListener(this);  
-        }  
+            btnD.SetOnClickListener(this);
+            
+            if (mode.Equals(Common.Mode.Easy.ToString())) TIMEOUT = 20000;
+            else if (mode.Equals(Common.Mode.Medium.ToString())) TIMEOUT = 15000;
+            else if (mode.Equals(Common.Mode.Hard.ToString())) TIMEOUT = 10000;
+            else TIMEOUT = 5000;
+
+            if (TIMEOUT == 20000) progressBar.Max = 20;
+            else if (TIMEOUT == 15000) progressBar.Max = 15;
+            else if (TIMEOUT == 10000) progressBar.Max = 10;
+            else progressBar.Max = 5;
+        }
+        
         public void OnClick(View v) {  
             mCountDown.Cancel();  
             if (index < totalQuestion) {  
@@ -57,7 +75,8 @@ namespace WielkiQuizWiedzy
                 } else ShowQuestion(++index);  
             }  
             txtScore.Text = $"{score}";  
-        }  
+        }
+        
         public void ShowQuestion(int index) {  
             if (index < totalQuestion) {  
                 thisQuestion++;  
@@ -84,23 +103,24 @@ namespace WielkiQuizWiedzy
         protected override void OnResume() {  
             base.OnResume();  
             questionPlay = db.GetQuestionMode(mode);  
-            totalQuestion = questionPlay.Count;  
+            totalQuestion = questionPlay.Count;
             mCountDown = new CountDown(this, TIMEOUT, INTERVAL);  
             ShowQuestion(index);  
         }  
         class CountDown: CountDownTimer {  
             Playing playing;  
-            public CountDown(Playing playing, long totalTime, long intervel): base(totalTime, intervel) {  
+            public CountDown(Playing playing, long totalTime, long interval): base(totalTime, interval) {  
                 this.playing = playing;  
             }  
             public override void OnFinish() {  
                 Cancel();  
                 playing.ShowQuestion(++index);  
             }  
-            public override void OnTick(long millisUntilFinished) {  
-                playing.progressValue++;  
-                playing.progressBar.Progress = playing.progressValue;  
+            public override void OnTick(long millisUntilFinished) {
+                playing.progressBar.Progress = playing.progressValue;
+                playing.progressValue++;
             }  
-        }  
+        }
+        public override void OnBackPressed(){}
     }  
 }  

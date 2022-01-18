@@ -5,7 +5,7 @@
         <!-- Customize your theme here. -->
         <item name="android:colorPrimary">#49A64D</item>
         <item name="android:colorPrimaryDark">#49A64D</item>
-        <item name="android:colorAccent">@color/colorAccent</item>
+        <item name="android:colorAccent">#49A64D</item>
     </style>
 
 </resources>

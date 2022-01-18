@@ -7,16 +7,22 @@ using System.IO;
 
 namespace WielkiQuizWiedzy {
 public class DbHelper: SQLiteOpenHelper {
+    
         private static readonly string DbPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-        private static readonly string DbName = "MyDB.db";  
+        private static readonly string DbName = "MyDB.db";
         private static readonly int Version = 1;
         private readonly Context _context;
+        
         public DbHelper(Context context): base(context, DbName, null, Version) {
+            
             _context = context;
         }
-        private string GetSQLitePath() {    
+        
+        private string GetSQLitePath() {
+            
             return Path.Combine(DbPath, DbName);
         }
+        
         public override SQLiteDatabase WritableDatabase => CreateSqLiteDb();
 
         private SQLiteDatabase CreateSqLiteDb() {
@@ -90,10 +96,10 @@ public class DbHelper: SQLiteOpenHelper {
             SQLiteDatabase db = WritableDatabase;
             ICursor c;
             int limit = 0;
-            if (mode.Equals(Commonn.MODE.EASY.ToString())) limit = Commonn.EASY_MODE_NUM;
-            else if (mode.Equals(Commonn.MODE.MEDIUM.ToString())) limit = Commonn.MEDIUM_MODE_NUM;
-            else if (mode.Equals(Commonn.MODE.HARD.ToString())) limit = Commonn.HARD_MODE_NUM;
-            else limit = Commonn.HARDEST_MODE_NUM;
+            if (mode.Equals(Common.Mode.Easy.ToString())) limit = Common.EasyModeNum;
+            else if (mode.Equals(Common.Mode.Medium.ToString())) limit = Common.MediumModeNum;
+            else if (mode.Equals(Common.Mode.Hard.ToString())) limit = Common.HardModeNum;
+            else limit = Common.HardestModeNum;
             try {
                 c = db.RawQuery($"SELECT * FROM Questions ORDER BY Random() LIMIT {limit}", null);
                 if (c == null) return null;
@@ -113,8 +119,8 @@ public class DbHelper: SQLiteOpenHelper {
                 c.Close();
             } catch {}
             return lstQuestion;
-        }  
-        //Update 2.0
+        }
+        
         public int GetPlayCount(int Level) {
             int result = 0;
             SQLiteDatabase db = WritableDatabase;
@@ -132,7 +138,7 @@ public class DbHelper: SQLiteOpenHelper {
             {
                 // ignored
             }
-
+            
             return result;
         }
         public void UpdatePlayCount(int Level, int PlayCount) {

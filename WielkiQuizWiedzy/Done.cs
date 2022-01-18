@@ -2,16 +2,17 @@
 using System.Reflection;
 using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.OS;
 using Android.Widget;
 
 namespace WielkiQuizWiedzy
 {
-[Activity(Label = "Done", Theme = "@style/Theme.AppCompat.Light.NoActionBar")]  
+[Activity(Label = "Done", Theme = "@style/Theme.AppCompat.Light.NoActionBar", ScreenOrientation = ScreenOrientation.Portrait)]  
     public class Done: Activity {  
         Button btnTryAgain;  
         TextView txtTotalQuestion, txtTotalScore;  
-        ProgressBar progressBarResult;  
+        ProgressBar progressBarResult;
         protected override void OnCreate(Bundle savedInstanceState) {  
             base.OnCreate(savedInstanceState);  
             SetContentView(Resource.Layout.done_layout);  
@@ -31,42 +32,29 @@ namespace WielkiQuizWiedzy
             if (bundle != null) {  
                 int score = bundle.GetInt("SCORE");  
                 int totalQuestion = bundle.GetInt("TOTAL");  
-                int coreectAnswer = bundle.GetInt("CORRECT");  
-                //Update 2.0  
-                int playCount = 0;  
-                if (totalQuestion == 30) // Easy Mode  
+                int coreectAnswer = bundle.GetInt("CORRECT");
+                
+                if (totalQuestion == 50) // Easy Mode 
                 {  
-                    playCount = db.GetPlayCount(0);  
-                    playCount++;  
-                    db.UpdatePlayCount(0, playCount);  
-                } else  
-                if (totalQuestion == 50) // Medium Mode  
+                    score += (score/10);  
+                } 
+                
+                else if (totalQuestion == 100) // Medium Mode  
                 {  
-                    playCount = db.GetPlayCount(1);  
-                    playCount++;  
-                    db.UpdatePlayCount(1, playCount);  
-                } else  
-                if (totalQuestion == 100) // Hard Mode  
+                    score += (score/10)*3;  
+                } 
+                
+                else if (totalQuestion == 150) // Hard Mode  
                 {  
-                    playCount = db.GetPlayCount(2);  
-                    playCount++;  
-                    db.UpdatePlayCount(2, playCount);  
-                } else  
-                if (totalQuestion == 200) // Hardest Mode  
-                {  
-                    playCount = db.GetPlayCount(3);  
-                    playCount++;  
-                    db.UpdatePlayCount(3, playCount);  
-                }  
-                double minus = ((5.0 / (float) score) * 100) * (playCount - 1);  
-                double finalScore = score - minus;  
-                //  
-                txtTotalScore.Text = $"SCORE :{ finalScore.ToString("  0.00 ")}";  
+                    score += (score/10)*5;  
+                }
+
+                txtTotalScore.Text = $"SCORE :{ score.ToString("  0.00 ")}";  
                 txtTotalQuestion.Text = $"PASSED : {coreectAnswer}/{totalQuestion}";  
                 progressBarResult.Max = totalQuestion;  
-                progressBarResult.Progress = coreectAnswer;  
+                progressBarResult.Progress = coreectAnswer;
                 //Save Score  
-                db.InsertScore(score);  
+                db.InsertScore(score);
             }  
         }  
     }  

@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
 using Android.App;
+using Android.Content.PM;
 using Android.OS;
 using Android.Widget;
 
 namespace WielkiQuizWiedzy
 {
-    [Activity(Label = "Score", Theme = "@style/AppTheme")]  
+    [Activity(Label = "Score", Theme = "@style/Theme.AppCompat.Light.NoActionBar", ScreenOrientation = ScreenOrientation.Portrait)]  
     public class Score: Activity {  
         ListView listView;  
         protected override void OnCreate(Bundle savedInstanceState) {  

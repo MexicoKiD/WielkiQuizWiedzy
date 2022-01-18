@@ -5,8 +5,13 @@ using Android.Content.PM;
 using Android.Database.Sqlite;
 using Android.OS;
 using Android.Runtime;
-using Android.Widget;
+using Android.Views;
 using AndroidX.AppCompat.App;
+using Java.Lang;
+using Java.Util;
+using Xamarin.Forms;
+using Button = Android.Widget.Button;
+using Process = Android.OS.Process;
 
 namespace WielkiQuizWiedzy
 {
@@ -32,7 +37,7 @@ namespace WielkiQuizWiedzy
             exitButton!.Click += closeApplication;
 
         }
-
+        
         private void StartGame(object sender, EventArgs eventArgs)
         {
             Intent intent = new Intent(this, typeof(GameActivity));

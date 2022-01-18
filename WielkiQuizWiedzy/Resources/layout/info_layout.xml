@@ -6,31 +6,16 @@
                 android:backgroundTint="#4CAF50">
 
     <TextView
-            android:id="@+id/logo2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="Wielki Quiz Wiedzy"
-            android:textSize="34sp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="16dp"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="16dp"
-            android:textAlignment="center"
-            android:textStyle="bold"/>
-
-    <TextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
             android:text="Autorzy:"
-            android:layout_below="@+id/logo2"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:layout_alignParentStart="true"/>
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="32dp"
+            android:layout_below="@+id/imageView"/>
 
     <TextView
             android:id="@+id/textView5"
@@ -154,5 +139,17 @@
             android:layout_alignParentStart="true"
             android:layout_marginStart="16dp"
             android:textSize="16sp"/>
+
+    <ImageView
+            android:src="@drawable/ic_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:layout_marginTop="16dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="32dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="24dp"/>
 
 </RelativeLayout>

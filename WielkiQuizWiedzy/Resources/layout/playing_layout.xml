@@ -1,9 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" 
-        android:background="#242E38" 
-        android:layout_width="match_parent" 
+﻿<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="#242E38"
+        android:layout_width="match_parent"
         android:layout_height="match_parent">
-
+    
     <TextView
             android:id="@+id/question_flag"
             android:layout_width="300dp"
@@ -15,60 +14,60 @@
             android:gravity="center"
             android:text="Question"/>
     
-    <RelativeLayout 
-            android:layout_below="@+id/question_flag" 
-            android:layout_alignParentBottom="true" 
-            android:layout_marginLeft="30dp" 
-            android:layout_marginRight="30dp" 
-            android:layout_marginTop="20dp" 
+    <RelativeLayout
+            android:layout_below="@+id/question_flag"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
             android:elevation="4dp"
-            android:background="@drawable/round_corners" 
-            android:layout_width="match_parent" 
+            android:background="@drawable/round_corners"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
         
-        <LinearLayout 
-                android:orientation="vertical" 
-                android:id="@+id/btnGroup" 
-                android:paddingTop="10dp" 
-                android:layout_width="match_parent" 
+        <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/btnGroup"
+                android:paddingTop="10dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content">
             
-            <LinearLayout 
-                    android:weightSum="2" 
-                    android:orientation="horizontal" 
-                    android:layout_width="match_parent" 
+            <LinearLayout
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                 
-                <TextView 
-                        android:id="@+id/txtScore" 
-                        android:layout_weight="1" 
-                        android:layout_width="0dp" 
-                        android:layout_height="wrap_content" 
-                        android:background="@drawable/button_border" 
-                        android:text="0" 
-                        android:textSize="36sp" 
-                        android:gravity="center" />
+                <TextView
+                        android:id="@+id/txtScore"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_border"
+                        android:text="0"
+                        android:textSize="36sp"
+                        android:gravity="center"/>
                 
-                <TextView 
-                        android:id="@+id/questionNumber" 
-                        android:layout_weight="1" 
-                        android:layout_width="0dp" 
+                <TextView
+                        android:id="@+id/questionNumber"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content" 
-                        android:background="@drawable/button_border" 
-                        android:text=" 1/30" 
-                        android:textSize="36sp" 
-                        android:gravity="center" /> 
+                        android:background="@drawable/button_border"
+                        android:text="1/30"
+                        android:textSize="36sp"
+                        android:gravity="center"/> 
                 
             </LinearLayout>
             
             <ProgressBar
-                    style="?android:attr/progressBarStyleHorizontal" 
-                    android:id="@+id/progressBar" 
-                    android:layout_marginLeft="8dp" 
-                    android:layout_marginRight="8dp" 
-                    android:max="5" 
-                    android:layout_width="match_parent" 
-                    android:layout_height="wrap_content" />
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:id="@+id/progressBar"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:max="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
 
             <Button
                     android:id="@+id/btnAnswerA"
