@@ -26,6 +26,7 @@
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -42,6 +43,7 @@
     <EnableLLVM>false</EnableLLVM>
     <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
     <BundleAssemblies>false</BundleAssemblies>
+    <AndroidSupportedAbis>armeabi-v7a;x86;arm64-v8a;x86_64</AndroidSupportedAbis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -92,16 +94,6 @@
     <AndroidResource Include="Resources\drawable\icon_silver.xml" />
     <AndroidResource Include="Resources\drawable\ic_background.xml" />
     <AndroidResource Include="Resources\drawable\ic_dot.xml" />
-    <AndroidResource Include="Resources\drawable\ic_launcher1.xml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\ic_launcher1_background.xml" />
-    <AndroidResource Include="Resources\drawable\ic_launcher1_foreground.xml" />
-    <AndroidResource Include="Resources\drawable\ic_launcher1_round.xml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
-    </AndroidResource>
     <AndroidResource Include="Resources\drawable\ic_logo.xml" />
     <AndroidResource Include="Resources\drawable\ic_logo_black.xml" />
     <AndroidResource Include="Resources\drawable\ic_splash_screen.xml" />
