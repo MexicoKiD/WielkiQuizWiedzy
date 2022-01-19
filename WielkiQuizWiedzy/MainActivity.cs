@@ -15,7 +15,7 @@ using Process = Android.OS.Process;
 
 namespace WielkiQuizWiedzy
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/Theme.AppCompat.Light.NoActionBar", MainLauncher = true, ScreenOrientation = ScreenOrientation.Portrait)]
+    [Activity(Label = "@string/app_name", Theme = "@style/Theme.AppCompat.Light.NoActionBar", ScreenOrientation = ScreenOrientation.Portrait)]
     
     public class MainActivity : AppCompatActivity {
         

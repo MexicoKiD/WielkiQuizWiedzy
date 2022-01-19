@@ -78,6 +78,7 @@
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Score.cs" />
+    <Compile Include="SplashActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -86,8 +87,23 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\button_border.xml" />
+    <AndroidResource Include="Resources\drawable\icon_bronze.xml" />
+    <AndroidResource Include="Resources\drawable\icon_gold.xml" />
+    <AndroidResource Include="Resources\drawable\icon_silver.xml" />
     <AndroidResource Include="Resources\drawable\ic_background.xml" />
+    <AndroidResource Include="Resources\drawable\ic_dot.xml" />
+    <AndroidResource Include="Resources\drawable\ic_launcher1.xml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\ic_launcher1_background.xml" />
+    <AndroidResource Include="Resources\drawable\ic_launcher1_foreground.xml" />
+    <AndroidResource Include="Resources\drawable\ic_launcher1_round.xml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
     <AndroidResource Include="Resources\drawable\ic_logo.xml" />
+    <AndroidResource Include="Resources\drawable\ic_logo_black.xml" />
     <AndroidResource Include="Resources\drawable\ic_splash_screen.xml" />
     <AndroidResource Include="Resources\drawable\rounded_corners.xml" />
     <AndroidResource Include="Resources\drawable\round_corners.xml" />

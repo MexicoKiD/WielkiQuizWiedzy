@@ -49,8 +49,8 @@ namespace WielkiQuizWiedzy
                     score += (score/10)*5;  
                 }
 
-                txtTotalScore.Text = $"SCORE :{ score.ToString("  0.00 ")}";  
-                txtTotalQuestion.Text = $"PASSED : {coreectAnswer}/{totalQuestion}";  
+                txtTotalScore.Text = $"WYNIK :{ score.ToString("  0.00 ")}";  
+                txtTotalQuestion.Text = $"POPRAWNE : {coreectAnswer}/{totalQuestion}";  
                 progressBarResult.Max = totalQuestion;  
                 progressBarResult.Progress = coreectAnswer;
                 //Save Score  

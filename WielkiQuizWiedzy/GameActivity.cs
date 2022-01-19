@@ -37,10 +37,10 @@ namespace WielkiQuizWiedzy
         }
         
         private String getPlayMode() {  
-            if (seekBar.Progress == 0) return Common.Mode.Easy.ToString();  
-            else if (seekBar.Progress == 1) return Common.Mode.Medium.ToString();  
-            else if (seekBar.Progress == 2) return Common.Mode.Hard.ToString();  
-            else return Common.Mode.Hardest.ToString();  
+            if (seekBar.Progress == 0) return Common.Mode.ŁATWY.ToString();  
+            else if (seekBar.Progress == 1) return Common.Mode.ŚREDNI.ToString();  
+            else if (seekBar.Progress == 2) return Common.Mode.TRUDNY.ToString();  
+            else return Common.Mode.NAJTRUDNIEJSZY.ToString();  
         }  
         public void OnProgressChanged(SeekBar seekBar, int progress, bool fromUser) {  
             txtMode.Text = getPlayMode().ToUpper();  

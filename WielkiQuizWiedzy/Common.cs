@@ -12,10 +12,10 @@
 
         public enum Mode
         {
-            Easy,
-            Medium,
-            Hard,
-            Hardest
+            ŁATWY,
+            ŚREDNI,
+            TRUDNY,
+            NAJTRUDNIEJSZY
         }
     }
 }

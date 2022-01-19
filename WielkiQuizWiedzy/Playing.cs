@@ -53,9 +53,9 @@ namespace WielkiQuizWiedzy
             btnC.SetOnClickListener(this);  
             btnD.SetOnClickListener(this);
             
-            if (mode.Equals(Common.Mode.Easy.ToString())) TIMEOUT = 20000;
-            else if (mode.Equals(Common.Mode.Medium.ToString())) TIMEOUT = 15000;
-            else if (mode.Equals(Common.Mode.Hard.ToString())) TIMEOUT = 10000;
+            if (mode.Equals(Common.Mode.ŁATWY.ToString())) TIMEOUT = 20000;
+            else if (mode.Equals(Common.Mode.ŚREDNI.ToString())) TIMEOUT = 15000;
+            else if (mode.Equals(Common.Mode.TRUDNY.ToString())) TIMEOUT = 10000;
             else TIMEOUT = 5000;
 
             if (TIMEOUT == 20000) progressBar.Max = 20;

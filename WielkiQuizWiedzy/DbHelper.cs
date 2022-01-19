@@ -96,9 +96,9 @@ public class DbHelper: SQLiteOpenHelper {
             SQLiteDatabase db = WritableDatabase;
             ICursor c;
             int limit = 0;
-            if (mode.Equals(Common.Mode.Easy.ToString())) limit = Common.EasyModeNum;
-            else if (mode.Equals(Common.Mode.Medium.ToString())) limit = Common.MediumModeNum;
-            else if (mode.Equals(Common.Mode.Hard.ToString())) limit = Common.HardModeNum;
+            if (mode.Equals(Common.Mode.ŁATWY.ToString())) limit = Common.EasyModeNum;
+            else if (mode.Equals(Common.Mode.ŚREDNI.ToString())) limit = Common.MediumModeNum;
+            else if (mode.Equals(Common.Mode.TRUDNY.ToString())) limit = Common.HardModeNum;
             else limit = Common.HardestModeNum;
             try {
                 c = db.RawQuery($"SELECT * FROM Questions ORDER BY Random() LIMIT {limit}", null);
