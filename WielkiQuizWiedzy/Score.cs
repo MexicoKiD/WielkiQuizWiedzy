@@ -10,8 +10,11 @@ namespace WielkiQuizWiedzy
     public class Score: Activity {  
         ListView listView;  
         protected override void OnCreate(Bundle savedInstanceState) {  
+            
             base.OnCreate(savedInstanceState);  
+            
             SetContentView(Resource.Layout.score_layout);  
+            
             listView = FindViewById < ListView > (Resource.Id.lstView);  
             DbHelper db = new DbHelper(this);  
             List <Ranking> lstRanking = db.GetRanking();  

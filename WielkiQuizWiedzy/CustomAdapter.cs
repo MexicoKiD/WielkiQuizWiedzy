@@ -28,9 +28,9 @@ namespace WielkiQuizWiedzy
             View view = inflater.Inflate(Resource.Layout.row, null);  
             TextView txtTop = view.FindViewById < TextView > (Resource.Id.txtTop);  
             ImageView imageTop = view.FindViewById < ImageView > (Resource.Id.imgTop);  
-            if (position == 0) imageTop.SetBackgroundResource(Resource.Drawable.splash);  
-            else if (position == 1) imageTop.SetBackgroundResource(Resource.Drawable.splash);  
-            else imageTop.SetBackgroundResource(Resource.Drawable.splash);  
+            if (position == 0) imageTop.SetBackgroundResource(Resource.Drawable.ic_logo);  
+            else if (position == 1) imageTop.SetBackgroundResource(Resource.Drawable.ic_logo);  
+            else imageTop.SetBackgroundResource(Resource.Drawable.ic_logo);  
             txtTop.Text = $"{lstRanking[position].Score.ToString(" 0.00 ")}";  
             return view;  
         }  

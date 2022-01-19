@@ -8,6 +8,7 @@
         <entry key="..\:/Users/hmoci/RiderProjects/WielkiQuizWiedzy/WielkiQuizWiedzy/Resources/drawable/ic_button2.xml" value="0.67" />
         <entry key="..\:/Users/hmoci/RiderProjects/WielkiQuizWiedzy/WielkiQuizWiedzy/Resources/drawable/ic_ikona.xml" value="0.3828125" />
         <entry key="..\:/Users/hmoci/RiderProjects/WielkiQuizWiedzy/WielkiQuizWiedzy/Resources/drawable/ic_logo.xml" value="0.25" />
+        <entry key="..\:/Users/hmoci/RiderProjects/WielkiQuizWiedzy/WielkiQuizWiedzy/Resources/drawable/ic_menu.xml" value="0.3828125" />
         <entry key="..\:/Users/hmoci/RiderProjects/WielkiQuizWiedzy/WielkiQuizWiedzy/Resources/drawable/ic_question.xml" value="0.3828125" />
         <entry key="..\:/Users/hmoci/RiderProjects/WielkiQuizWiedzy/WielkiQuizWiedzy/Resources/drawable/ic_splashscreen.xml" value="0.3828125" />
         <entry key="..\:/Users/hmoci/RiderProjects/WielkiQuizWiedzy/WielkiQuizWiedzy/Resources/drawable/round_corners.xml" value="0.3828125" />
@@ -15,7 +16,7 @@
         <entry key="..\:/Users/hmoci/RiderProjects/WielkiQuizWiedzy/WielkiQuizWiedzy/Resources/layout/achievement_layout.xml" value="0.25" />
         <entry key="..\:/Users/hmoci/RiderProjects/WielkiQuizWiedzy/WielkiQuizWiedzy/Resources/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/hmoci/RiderProjects/WielkiQuizWiedzy/WielkiQuizWiedzy/Resources/layout/done_layout.xml" value="0.365625" />
-        <entry key="..\:/Users/hmoci/RiderProjects/WielkiQuizWiedzy/WielkiQuizWiedzy/Resources/layout/game_layout.xml" value="0.75" />
+        <entry key="..\:/Users/hmoci/RiderProjects/WielkiQuizWiedzy/WielkiQuizWiedzy/Resources/layout/game_layout.xml" value="0.33" />
         <entry key="..\:/Users/hmoci/RiderProjects/WielkiQuizWiedzy/WielkiQuizWiedzy/Resources/layout/info_layout.xml" value="0.33" />
         <entry key="..\:/Users/hmoci/RiderProjects/WielkiQuizWiedzy/WielkiQuizWiedzy/Resources/layout/playing_layout.xml" value="0.365625" />
         <entry key="..\:/Users/hmoci/RiderProjects/WielkiQuizWiedzy/WielkiQuizWiedzy/Resources/layout/row.xml" value="0.365625" />

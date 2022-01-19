@@ -4,28 +4,30 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    
+
     <LinearLayout
             android:padding="10dp"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-        
+
         <ImageView
                 android:id="@+id/imgTop"
-                android:background="@drawable/splash"
+                android:background="@drawable/ic_logo"
                 android:layout_width="50dp"
-                android:layout_height="50dp"/>
-        
+                android:layout_height="70dp"/>
+
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/txtTop"
                 android:gravity="center"
                 android:layout_marginLeft="10dp"
-                android:textSize="30sp"
-                android:textStyle="bold"/>
-        
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textColor="@android:color/background_light"/>
+
     </LinearLayout>
     
 </LinearLayout>

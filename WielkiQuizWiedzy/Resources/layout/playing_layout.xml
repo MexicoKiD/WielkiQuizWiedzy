@@ -1,120 +1,167 @@
 ﻿<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:background="#242E38"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    
+                android:background="@drawable/ic_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
     <TextView
             android:id="@+id/question_flag"
             android:layout_width="300dp"
-            android:layout_height="200dp"
+            android:layout_height="150dp"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
-            android:background="@drawable/splash"
-            android:gravity="center"
-            android:text="Question"/>
-    
-    <RelativeLayout
-            android:layout_below="@+id/question_flag"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="20dp"
-            android:elevation="4dp"
             android:background="@drawable/round_corners"
+            android:gravity="center"
+            android:text="Question"
+            android:textSize="14sp"
+            android:textAlignment="center"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="32dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="32dp"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"/>
+
+    <TextView
+            android:id="@+id/questionNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1/30"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginTop="32dp"
+            android:layout_below="@+id/question_flag"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="32dp"
+            android:textColor="@android:color/background_light"/>
+
+    <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:id="@+id/progressBar"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:max="5"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        
-        <LinearLayout
-                android:orientation="vertical"
-                android:id="@+id/btnGroup"
-                android:paddingTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-            
-            <LinearLayout
-                    android:weightSum="2"
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                
-                <TextView
-                        android:id="@+id/txtScore"
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/button_border"
-                        android:text="0"
-                        android:textSize="36sp"
-                        android:gravity="center"/>
-                
-                <TextView
-                        android:id="@+id/questionNumber"
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content" 
-                        android:background="@drawable/button_border"
-                        android:text="1/30"
-                        android:textSize="36sp"
-                        android:gravity="center"/> 
-                
-            </LinearLayout>
-            
-            <ProgressBar
-                    style="?android:attr/progressBarStyleHorizontal"
-                    android:id="@+id/progressBar"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:max="5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+            android:layout_height="5dp"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/textView14"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="64dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="64dp"/>
 
-            <Button
-                    android:id="@+id/btnAnswerA"
-                    android:layout_margin="4dp"
-                    android:background="#228B22"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:text="Answer"
-                    android:textColor="#000000"
-                    android:textStyle="bold"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+    <Button
+            android:id="@+id/btnAnswerA"
+            android:background="@drawable/round_corners"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="Answer"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_below="@+id/progressBar"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"/>
 
-            <Button
-                    android:id="@+id/btnAnswerB"
-                    android:layout_margin="4dp"
-                    android:background="#228B22"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:text="Answer"
-                    android:textColor="#000000"
-                    android:textStyle="bold"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+    <Button
+            android:id="@+id/btnAnswerB"
+            android:background="@drawable/round_corners"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="Answer"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_below="@+id/btnAnswerA"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"/>
 
-            <Button
-                    android:id="@+id/btnAnswerC"
-                    android:layout_margin="4dp"
-                    android:background="#228B22"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:text="Answer"
-                    android:textColor="#000000"
-                    android:textStyle="bold"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+    <Button
+            android:id="@+id/btnAnswerC"
+            android:background="@drawable/round_corners"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="Answer"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_below="@+id/btnAnswerB"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"/>
 
-            <Button
-                    android:id="@+id/btnAnswerD"
-                    android:layout_margin="4dp"
-                    android:background="#228B22"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:text="Answer"
-                    android:textColor="#000000"
-                    android:textStyle="bold"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/> 
-            
-        </LinearLayout>
-        
-    </RelativeLayout>
-    
+    <Button
+            android:id="@+id/btnAnswerD"
+            android:background="@drawable/round_corners"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="Answer"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_below="@+id/btnAnswerC"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"/>
+
+    <TextView
+            android:id="@+id/txtScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginTop="32dp"
+            android:layout_below="@+id/question_flag"
+            android:textColor="@android:color/background_light"
+            android:layout_toEndOf="@+id/textView15"
+            android:layout_marginStart="8dp"/>
+
+    <TextView
+            android:text="Pytanie:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView14"
+            android:layout_toStartOf="@+id/questionNumber"
+            android:layout_marginEnd="8dp"
+            android:textAllCaps="true"
+            android:textColor="@android:color/background_light"
+            android:layout_marginTop="32dp"
+            android:layout_below="@+id/question_flag"
+            android:textSize="20sp"/>
+
+    <TextView
+            android:text="Punkty:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView15"
+            android:textAllCaps="true"
+            android:textColor="@android:color/background_light"
+            android:textSize="20sp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_below="@+id/question_flag"/>
+
 </RelativeLayout>

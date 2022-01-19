@@ -12,8 +12,8 @@ namespace WielkiQuizWiedzy
     public class GameActivity: Activity, SeekBar.IOnSeekBarChangeListener
     {
         SeekBar seekBar;  
-        TextView txtMode;  
-        Button btnPlay, btnScore;  
+        TextView txtMode;
+        private Button btnPlay;  
         DbHelper db;  
         SQLiteDatabase sqLiteDB;
         protected override void OnCreate(Bundle bundle)
@@ -26,20 +26,14 @@ namespace WielkiQuizWiedzy
             sqLiteDB = db.WritableDatabase;  
             seekBar = FindViewById<SeekBar>(Resource.Id.seekBar);  
             txtMode = FindViewById<TextView>(Resource.Id.txtMode);  
-            btnPlay = FindViewById<Button>(Resource.Id.btnPlay);  
-            btnScore = FindViewById<Button>(Resource.Id.btnScore);  
+            btnPlay = FindViewById<Button>(Resource.Id.btnPlay);
             btnPlay.Click += delegate {  
                 Intent intent = new Intent(this, typeof(Playing));  
                 intent.PutExtra("MODE", getPlayMode());  
                 StartActivity(intent);  
                 Finish();  
             };  
-            seekBar.SetOnSeekBarChangeListener(this);  
-            btnScore.Click += delegate {  
-                Intent intent = new Intent(this, typeof(Score));  
-                StartActivity(intent);  
-                Finish();  
-            };
+            seekBar.SetOnSeekBarChangeListener(this);
         }
         
         private String getPlayMode() {  

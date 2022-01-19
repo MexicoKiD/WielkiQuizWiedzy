@@ -35,6 +35,9 @@ namespace WielkiQuizWiedzy
             
             Button exitButton = FindViewById<Button>(Resource.Id.buttonExit);
             exitButton!.Click += closeApplication;
+            
+            Button btnScore = FindViewById<Button>(Resource.Id.btnScore);
+            btnScore.Click += ScoreBoard;
 
         }
         
@@ -43,6 +46,13 @@ namespace WielkiQuizWiedzy
             Intent intent = new Intent(this, typeof(GameActivity));
             this.StartActivity(intent);
         }
+
+        private void ScoreBoard(object sender, EventArgs eventArgs)
+        {
+            Intent intent = new Intent(this, typeof(Score));
+            this.StartActivity(intent);
+        }
+
         private void infoButtonOnClick(object sender, EventArgs eventArgs)
         {
             Intent intent = new Intent(this, typeof(InfoActivity));
