@@ -1,49 +1,48 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:background="@drawable/ic_background"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
     <TextView
-            android:id="@+id/txtTotalScore"
+            android:id="@+id/TotalScore"
             android:gravity="center"
             android:text="Wynik : 0"
             android:textSize="30sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="64dp"
-            android:layout_below="@+id/imageView3"
+            android:layout_below="@+id/logoDone"
             android:textColor="@android:color/background_light"
             android:textAllCaps="true"/>
 
     <TextView
-            android:id="@+id/txtTotalQuestion"
+            android:id="@+id/TotalQuestion"
             android:gravity="center"
             android:text=""
             android:textSize="30sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:layout_below="@+id/txtTotalScore"
+            android:layout_below="@+id/TotalScore"
             android:textAllCaps="true"
             android:textColor="@android:color/background_light"/>
 
     <ProgressBar
             style="?android:attr/progressBarStyleHorizontal"
-            android:id="@+id/progressBardone"
+            android:id="@+id/progressBarDone"
             android:layout_width="match_parent"
             android:layout_height="10dp"
-            android:layout_alignBottom="@+id/txtTotalQuestion"
+            android:layout_alignBottom="@+id/TotalQuestion"
             android:layout_marginTop="32dp"
-            android:layout_below="@+id/txtTotalQuestion"
+            android:layout_below="@+id/TotalQuestion"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="64dp"
             android:layout_alignParentStart="true"
             android:layout_marginStart="64dp"/>
 
     <Button
-            android:id="@+id/btnTryAgain"
+            android:id="@+id/buttonTryAgain"
             android:background="@drawable/rounded_corners"
             android:foreground="?android:attr/selectableItemBackground"
             android:text="graj dalej"
@@ -56,14 +55,14 @@
             android:textSize="30sp"
             android:textAlignment="center"
             android:layout_marginTop="64dp"
-            android:layout_below="@+id/progressBardone"
+            android:layout_below="@+id/progressBarDone"
             />
 
     <ImageView
             android:src="@drawable/ic_logo"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:id="@+id/imageView3"
+            android:id="@+id/logoDone"
             android:layout_marginTop="48dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"

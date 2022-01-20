@@ -8,7 +8,7 @@
         <item name="android:colorAccent">#49A64D</item>
     </style>
 
-    <style name="MyTheme.Splash" parent ="Theme.AppCompat.Light.NoActionBar">
+    <style name="MyTheme.Splash" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowBackground">@drawable/ic_splash_screen</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>

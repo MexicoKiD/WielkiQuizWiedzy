@@ -48,7 +48,7 @@
             android:background="@drawable/rounded_corners"
             android:gravity="center"
             android:layout_marginTop="32dp"
-            android:layout_below="@+id/btnScore"/>
+            android:layout_below="@+id/buttonScore"/>
 
     <Button
             android:id="@+id/buttonExit"
@@ -68,7 +68,7 @@
             android:layout_below="@+id/buttonInfo"/>
 
     <Button
-            android:id="@+id/btnScore"
+            android:id="@+id/buttonScore"
             android:background="@drawable/rounded_corners"
             android:text="wyniki"
             android:textColor="@android:color/background_light"

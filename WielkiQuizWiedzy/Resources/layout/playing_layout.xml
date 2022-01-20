@@ -4,7 +4,7 @@
                 android:layout_height="match_parent">
 
     <TextView
-            android:id="@+id/question_flag"
+            android:id="@+id/question"
             android:layout_width="300dp"
             android:layout_height="150dp"
             android:layout_alignParentTop="true"
@@ -29,7 +29,7 @@
             android:textSize="16sp"
             android:gravity="center"
             android:layout_marginTop="32dp"
-            android:layout_below="@+id/question_flag"
+            android:layout_below="@+id/question"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="32dp"
             android:textColor="@android:color/background_light"/>
@@ -50,7 +50,7 @@
             android:layout_marginStart="64dp"/>
 
     <Button
-            android:id="@+id/btnAnswerA"
+            android:id="@+id/buttonAnswerA"
             android:background="@drawable/round_corners"
             android:foreground="?android:attr/selectableItemBackground"
             android:text="Answer"
@@ -66,11 +66,10 @@
             android:paddingTop="16dp"
             android:paddingBottom="16dp"
             android:paddingStart="4dp"
-            android:paddingEnd="4dp"
-            />
+            android:paddingEnd="4dp"/>
 
     <Button
-            android:id="@+id/btnAnswerB"
+            android:id="@+id/buttonAnswerB"
             android:background="@drawable/round_corners"
             android:foreground="?android:attr/selectableItemBackground"
             android:text="Answer"
@@ -80,7 +79,7 @@
             android:layout_marginTop="32dp"
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
-            android:layout_below="@+id/btnAnswerA"
+            android:layout_below="@+id/buttonAnswerA"
             android:textAlignment="center"
             android:textSize="14sp"
             android:paddingBottom="16dp"
@@ -89,7 +88,7 @@
             android:paddingEnd="4dp"/>
 
     <Button
-            android:id="@+id/btnAnswerC"
+            android:id="@+id/buttonAnswerC"
             android:background="@drawable/round_corners"
             android:foreground="?android:attr/selectableItemBackground"
             android:text="Answer"
@@ -99,7 +98,7 @@
             android:layout_marginTop="32dp"
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
-            android:layout_below="@+id/btnAnswerB"
+            android:layout_below="@+id/buttonAnswerB"
             android:textAlignment="center"
             android:textSize="14sp"
             android:paddingTop="16dp"
@@ -108,7 +107,7 @@
             android:paddingEnd="4dp"/>
 
     <Button
-            android:id="@+id/btnAnswerD"
+            android:id="@+id/buttonAnswerD"
             android:background="@drawable/round_corners"
             android:foreground="?android:attr/selectableItemBackground"
             android:text="Answer"
@@ -118,7 +117,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
             android:layout_marginTop="32dp"
-            android:layout_below="@+id/btnAnswerC"
+            android:layout_below="@+id/buttonAnswerC"
             android:textAlignment="center"
             android:textSize="14sp"
             android:paddingTop="16dp"
@@ -127,14 +126,14 @@
             android:paddingEnd="4dp"/>
 
     <TextView
-            android:id="@+id/txtScore"
+            android:id="@+id/Score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0"
             android:textSize="16sp"
             android:gravity="center"
             android:layout_marginTop="32dp"
-            android:layout_below="@+id/question_flag"
+            android:layout_below="@+id/question"
             android:textColor="@android:color/background_light"
             android:layout_toEndOf="@+id/textView15"
             android:layout_marginStart="8dp"/>
@@ -149,7 +148,7 @@
             android:textAllCaps="true"
             android:textColor="@android:color/background_light"
             android:layout_marginTop="32dp"
-            android:layout_below="@+id/question_flag"
+            android:layout_below="@+id/question"
             android:textSize="16sp"/>
 
     <TextView
@@ -163,6 +162,6 @@
             android:layout_alignParentStart="true"
             android:layout_marginStart="32dp"
             android:layout_marginTop="32dp"
-            android:layout_below="@+id/question_flag"/>
+            android:layout_below="@+id/question"/>
 
 </RelativeLayout>

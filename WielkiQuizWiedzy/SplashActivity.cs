@@ -14,14 +14,14 @@ namespace WielkiQuizWiedzy
         {
             base.OnCreate(savedInstanceState);
         }
-        
+
         protected override async void OnResume()
         {
             base.OnResume();
             await SimulateStartup();
         }
-        
-        async Task SimulateStartup ()
+
+        private async Task SimulateStartup()
         {
             await Task.Delay(TimeSpan.FromSeconds(3));
             StartActivity(new Intent(Application.Context, typeof(MainActivity)));
