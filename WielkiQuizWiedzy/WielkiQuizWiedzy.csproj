@@ -19,7 +19,7 @@
         <AndroidResgenClass>Resource</AndroidResgenClass>
         <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
         <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
-        <TargetFrameworkVersion>v11.0</TargetFrameworkVersion>
+        <TargetFrameworkVersion>v12.0</TargetFrameworkVersion>
         <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
         <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
         <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
@@ -59,90 +59,90 @@
         <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
     </PropertyGroup>
     <ItemGroup>
-        <Reference Include="System"/>
-        <Reference Include="System.Xml"/>
-        <Reference Include="System.Core"/>
-        <Reference Include="Mono.Android"/>
-        <Reference Include="System.Numerics"/>
-        <Reference Include="System.Numerics.Vectors"/>
+        <Reference Include="System" />
+        <Reference Include="System.Xml" />
+        <Reference Include="System.Core" />
+        <Reference Include="Mono.Android" />
+        <Reference Include="System.Numerics" />
+        <Reference Include="System.Numerics.Vectors" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="Common.cs"/>
-        <Compile Include="CustomAdapter.cs"/>
-        <Compile Include="DbHelper.cs"/>
-        <Compile Include="Done.cs"/>
-        <Compile Include="GameActivity.cs"/>
-        <Compile Include="InfoActivity.cs"/>
-        <Compile Include="MainActivity.cs"/>
-        <Compile Include="Playing.cs"/>
-        <Compile Include="Question.cs"/>
-        <Compile Include="Ranking.cs"/>
-        <Compile Include="Resources\Resource.designer.cs"/>
-        <Compile Include="Properties\AssemblyInfo.cs"/>
-        <Compile Include="Score.cs"/>
-        <Compile Include="SplashActivity.cs"/>
+        <Compile Include="Common.cs" />
+        <Compile Include="CustomAdapter.cs" />
+        <Compile Include="DbHelper.cs" />
+        <Compile Include="Done.cs" />
+        <Compile Include="GameActivity.cs" />
+        <Compile Include="InfoActivity.cs" />
+        <Compile Include="MainActivity.cs" />
+        <Compile Include="Playing.cs" />
+        <Compile Include="Question.cs" />
+        <Compile Include="Ranking.cs" />
+        <Compile Include="Resources\Resource.designer.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="Score.cs" />
+        <Compile Include="SplashActivity.cs" />
     </ItemGroup>
     <ItemGroup>
-        <None Include="Resources\AboutResources.txt"/>
-        <None Include="Properties\AndroidManifest.xml"/>
-        <None Include="Assets\AboutAssets.txt"/>
+        <None Include="Resources\AboutResources.txt" />
+        <None Include="Properties\AndroidManifest.xml" />
+        <None Include="Assets\AboutAssets.txt" />
     </ItemGroup>
     <ItemGroup>
-        <AndroidResource Include="Resources\drawable\icon_bronze.xml"/>
-        <AndroidResource Include="Resources\drawable\icon_gold.xml"/>
-        <AndroidResource Include="Resources\drawable\icon_silver.xml"/>
-        <AndroidResource Include="Resources\drawable\ic_background.xml"/>
-        <AndroidResource Include="Resources\drawable\ic_dot.xml"/>
-        <AndroidResource Include="Resources\drawable\ic_logo.xml"/>
-        <AndroidResource Include="Resources\drawable\ic_logo_black.xml"/>
-        <AndroidResource Include="Resources\drawable\ic_splash_screen.xml"/>
-        <AndroidResource Include="Resources\drawable\rounded_corners.xml"/>
-        <AndroidResource Include="Resources\drawable\round_corners.xml"/>
+        <AndroidResource Include="Resources\drawable\icon_bronze.xml" />
+        <AndroidResource Include="Resources\drawable\icon_gold.xml" />
+        <AndroidResource Include="Resources\drawable\icon_silver.xml" />
+        <AndroidResource Include="Resources\drawable\ic_background.xml" />
+        <AndroidResource Include="Resources\drawable\ic_dot.xml" />
+        <AndroidResource Include="Resources\drawable\ic_logo.xml" />
+        <AndroidResource Include="Resources\drawable\ic_logo_black.xml" />
+        <AndroidResource Include="Resources\drawable\ic_splash_screen.xml" />
+        <AndroidResource Include="Resources\drawable\rounded_corners.xml" />
+        <AndroidResource Include="Resources\drawable\round_corners.xml" />
         <AndroidResource Include="Resources\layout\activity_main.xml">
             <SubType>Designer</SubType>
         </AndroidResource>
-        <AndroidResource Include="Resources\layout\done_layout.xml"/>
-        <AndroidResource Include="Resources\layout\game_layout.xml"/>
-        <AndroidResource Include="Resources\layout\info_layout.xml"/>
-        <AndroidResource Include="Resources\layout\playing_layout.xml"/>
-        <AndroidResource Include="Resources\layout\row.xml"/>
-        <AndroidResource Include="Resources\layout\score_layout.xml"/>
-        <AndroidResource Include="Resources\Raw\MyDB.db"/>
-        <AndroidResource Include="Resources\values\colors.xml"/>
-        <AndroidResource Include="Resources\values\ic_launcher_background.xml"/>
-        <AndroidResource Include="Resources\values\strings.xml"/>
-        <AndroidResource Include="Resources\values\styles.xml"/>
-        <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher.xml"/>
-        <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher_round.xml"/>
-        <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher.png"/>
-        <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher_foreground.png"/>
-        <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher_round.png"/>
-        <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher.png"/>
-        <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher_foreground.png"/>
-        <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher_round.png"/>
-        <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher.png"/>
-        <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher_foreground.png"/>
-        <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher_round.png"/>
-        <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher.png"/>
-        <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher_foreground.png"/>
-        <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher_round.png"/>
-        <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher.png"/>
-        <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_foreground.png"/>
-        <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.png"/>
+        <AndroidResource Include="Resources\layout\done_layout.xml" />
+        <AndroidResource Include="Resources\layout\game_layout.xml" />
+        <AndroidResource Include="Resources\layout\info_layout.xml" />
+        <AndroidResource Include="Resources\layout\playing_layout.xml" />
+        <AndroidResource Include="Resources\layout\row.xml" />
+        <AndroidResource Include="Resources\layout\score_layout.xml" />
+        <AndroidResource Include="Resources\Raw\MyDB.db" />
+        <AndroidResource Include="Resources\values\colors.xml" />
+        <AndroidResource Include="Resources\values\ic_launcher_background.xml" />
+        <AndroidResource Include="Resources\values\strings.xml" />
+        <AndroidResource Include="Resources\values\styles.xml" />
+        <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher.xml" />
+        <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher_round.xml" />
+        <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher.png" />
+        <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher_foreground.png" />
+        <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher_round.png" />
+        <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher.png" />
+        <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher_foreground.png" />
+        <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher_round.png" />
+        <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher.png" />
+        <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher_foreground.png" />
+        <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher_round.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher_foreground.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher_round.png" />
+        <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher.png" />
+        <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_foreground.png" />
+        <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.png" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="sqlite-net-pcl" Version="1.8.116"/>
-        <PackageReference Include="System.ComponentModel.Annotations" Version="6.0.0-preview.4.21253.7"/>
-        <PackageReference Include="Xamarin.Android.Arch.Core.Common" Version="1.1.1.3"/>
-        <PackageReference Include="Xamarin.Android.Support.Collections" Version="28.0.0.3"/>
-        <PackageReference Include="Xamarin.Android.Support.Compat" Version="28.0.0.3"/>
-        <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.3.1.3"/>
-        <PackageReference Include="Xamarin.AndroidX.ConstraintLayout" Version="2.1.1.2"/>
-        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2291"/>
-        <PackageReference Include="Xamarin.Google.Android.Material" Version="1.4.0.4"/>
-        <PackageReference Include="Xamarin.Essentials" Version="1.7.0"/>
+        <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+        <PackageReference Include="System.ComponentModel.Annotations" Version="6.0.0-preview.4.21253.7" />
+        <PackageReference Include="Xamarin.Android.Arch.Core.Common" Version="1.1.1.3" />
+        <PackageReference Include="Xamarin.Android.Support.Collections" Version="28.0.0.3" />
+        <PackageReference Include="Xamarin.Android.Support.Compat" Version="28.0.0.3" />
+        <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.3.1.3" />
+        <PackageReference Include="Xamarin.AndroidX.ConstraintLayout" Version="2.1.1.2" />
+        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2291" />
+        <PackageReference Include="Xamarin.Google.Android.Material" Version="1.4.0.4" />
+        <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
     </ItemGroup>
-    <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets"/>
+    <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
       Other similar extension points exist, see Microsoft.Common.targets.
       <Target Name="BeforeBuild">
